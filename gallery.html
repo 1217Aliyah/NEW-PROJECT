@@ -1,0 +1,196 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GALLERY</title>
+ </head>
+ <link rel="stylesheet" href="style.css">
+<body>
+
+  <!-- TOP NAVIGATION BAR -->
+  <nav>
+    <div class="nav-container">
+      <a href="homepage.html">HOME</a>
+      <a href="about me.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="gallery.html" style="background: #ffffff; color: rgb(254, 159, 210);">GALLERY</a>
+      <a href="video2.html">VIDEO</a>
+      <a href="family.html">FAMILY</a>
+    </div>
+  </nav>
+
+  <!-- MAIN GALLERY WORKSPACE CONTAINER -->
+  <main class="gallery-wrapper">
+
+    <h1 class="main-gallery-title">Gallery</h1>
+    <p class="gallery-subtitle">Moments with friends and my random pic.</p>
+
+    <!-- ================= CATEGORY 01: FRIENDS ================= -->
+    <section class="category-section">
+      <h2 class="category-title">Friends</h2>
+      
+      <div class="slider-outer-container">
+        <button class="slide-btn left" onclick="scrollSlider('friends-track', -1)">&#10094;</button>
+        
+        <div class="slider-track" id="friends-track">
+          <div class="gallery-card">
+            <a href="images/friends 1.jpg"><img src="images/friends 1.jpg" alt="Friends Profile 1"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 2.jpg"><img src="images/friends 2.jpg" alt="Friends Profile 2"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 3.jpg"><img src="images/friends 3.jpg" alt="Friends Profile 3"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 6.jpg"><img src="images/friends 6.jpg" alt="Friends Profile 4"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 7.jpg"><img src="images/friends 7.jpg" alt="Friends Profile 5"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 8.jpg"><img src="images/friends 8.jpg" alt="Friends Profile 6"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 9.jpg"><img src="images/friends 9.jpg" alt="Friends Profile 7"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 10.jpg"><img src="images/friends 10.jpg" alt="Friends Profile 8"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 11.jpg"><img src="images/friends 11.jpg" alt="Friends Profile 9"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 12.jpg"><img src="images/friends 12.jpg" alt="Friends Profile 10"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 13.jpg"><img src="images/friends 13.jpg" alt="Friends Profile 11"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/friends 15.jpg"><img src="images/friends 15.jpg" alt="Friends Profile 12"></a>
+          </div>
+        </div>
+
+        
+        <button class="slide-btn right" onclick="scrollSlider('friends-track', 1)">&#10095;</button>
+      </div>
+    </section>
+
+     <!-- ================= CATEGORY 02: RANDOM ================= -->
+    <section class="category-section">
+      <h2 class="category-title">Random</h2>
+      
+      <div class="slider-outer-container">
+        <button class="slide-btn left" onclick="scrollSlider('Random-track', -1)">&#10094;</button>
+        
+        <div class="slider-track" id="Random-track">
+          <div class="gallery-card">
+            <a href="images/random 1.jpg"><img src="images/random 1.jpg" alt="Random Pic 1"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 2.jpg"><img src="images/random 2.jpg" alt="Random Pic 2"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 4.jpg"><img src="images/random 4.jpg" alt="Random Pic 3"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 6.jpg"><img src="images/random 6.jpg" alt="Random Pic 4"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 8.jpg"><img src="images/random 8.jpg" alt="Random Pic 5"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 9.jpg"><img src="images/random 9.jpg" alt="Random Pic 6"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 10.jpg"><img src="images/random 10.jpg" alt="Random Pic 7"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 12.jpg"><img src="images/random 12.jpg" alt="Random Pic 8"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 13.jpg"><img src="images/random 13.jpg" alt="Random Pic 9"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 14.jpg"><img src="images/random 14.jpg" alt="Random Pic 10"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 19.jpg"><img src="images/random 19.jpg" alt="Random Pic 11"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 20.jpg"><img src="images/random 20.jpg" alt="Random Pic 12"></a>
+          </div>
+          <div class="gallery-card">
+            <a href="images/random 21.jpg"><img src="images/random 21.jpg" alt="Random Pic 13"></a>
+          </div>
+        </div>
+
+        
+        <button class="slide-btn right" onclick="scrollSlider('Random-track', 1)">&#10095;</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SINGLE LIGHTBOX POP-UP ================= -->
+<div id="custom-lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; z-index: 99999;">
+  
+  <!-- Click the black background area outside the image to close -->
+  <div onclick="closePopup()" style="position: absolute; width: 100%; height: 100%; cursor: pointer;"></div>
+  
+  <div style="position: relative; max-width: 85%; max-height: 85%; display: flex; justify-content: center; align-items: center;">
+    <!-- Close button (X) -->
+    <button onclick="closePopup()" style="position: absolute; top: -45px; right: 0; background: none; border: none; color: white; font-size: 35px; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+    
+    <!-- Container where the large image is displayed -->
+    <img id="popup-img" src="" alt="Large View" style="max-width: 100%; max-height: 85vh; object-fit: contain; border: 4px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-radius: 4px;">
+  </div>
+</div>
+
+<!-- ================= AUTOMATIC JAVASCRIPT LOGIC ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Find all image links inside your slider track
+  const track = document.getElementById("friends-track");
+  if (!track) return;
+  
+  const links = track.querySelectorAll(".gallery-card a");
+
+  // 2. Automatically apply the pop-up behavior when any link is clicked
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent browser from opening the image in a new tab
+      
+      const imageUrl = this.getAttribute("href"); // Extract the image URL from href
+      const popupImg = document.getElementById("popup-img");
+      const lightbox = document.getElementById("custom-lightbox");
+      
+      popupImg.src = imageUrl; // Insert the URL into the pop-up image tag
+      lightbox.style.display = "flex"; // Show the pop-up container
+    });
+  });
+});
+
+// 3. Function to close the pop-up
+function closePopup() {
+  document.getElementById("custom-lightbox").style.display = "none";
+}
+</script>
+
+
+  <!-- ==== Native Slider Translation Script Module ==== -->
+  <script>
+    function scrollSlider(trackId, direction) {
+      const track = document.getElementById(trackId);
+      // Reads individual card size dynamically to compute perfect sliding distances
+      const cardWidth = track.querySelector('.gallery-card').offsetWidth + 20;
+      track.scrollBy({
+        left: cardWidth * direction * 2, /* Slides track by 2 card increments per click trigger */
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
+

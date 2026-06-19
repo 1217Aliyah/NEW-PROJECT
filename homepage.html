@@ -1,0 +1,583 @@
+<html>
+<head>
+<meta charset="UT-8">
+<meta name="viewpoint" content="width=device=width, initial-scale=1.0">
+<title>HOMEPAGE</title>
+
+    <style>
+
+        :root{
+            --primary: #ffff;
+            --accent: #ff607b;
+        }
+       /*====general page setup====*/
+       body, html{
+             margin: 0;
+             padding: 0;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             min-height: 100vh;
+             overflow-x: hidden;
+            }
+        .hero-section {
+            /* Define the starting pink color as a fallback */
+            background-color: #EE819F; 
+    
+            /* Connect the animation loop: 12 seconds total duration, smooth linear ease, infinite looping */
+            animation: pinkColorShift 12s linear infinite;
+            center-text {
+            text-align: center;
+            }
+        }
+            /* Define the specific shifting shades of pink across the timeline keyframes */
+            @keyframes pinkColorShift {
+            0% {
+                background-color: #EE819F; /* original deep pink canvas color */
+            }
+            25% {
+                 background-color: #D81B60; /* Slightly darker vibrant magenta pink */
+            }
+            50% {
+                 background-color: #F48FB1; /* Soft pastel orchid pink tint */
+            }
+            75% {
+                 background-color: #E91E63; /* Warm ruby rose pink shade */
+            }
+            100% {
+                 background-color: #EE819F; /* Loops smoothly back to the exact starting color */
+            }
+            }
+        /*====navigation====*/
+        nav{
+            background:rgb(242, 148, 164);
+            position: sticky;
+            top: 0;
+            z-index: 3000;
+        }
+        .nav-container{ 
+            display:flex;
+            justify-content:center;
+            gap: 25px;
+            padding: 0px; 
+        }
+        .nav-container a{
+            text-decoration:none;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition:0.3s;
+        }
+        .nav-container a:hover{
+            background: var(--primary);
+            color:rgb(254, 159, 210);
+        }
+
+        /*===== hero layout =====*/
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            gap: 0px;
+            margin-top: 0 auto;
+            height: 80vh;
+            padding-top: 5px;
+        }
+        .hero-text {
+            flex: 1.2;
+            text-align: left;
+            padding-left: 50px;
+        }
+        .hero-text h1 {
+            font-size: 55px;
+            color: #ffffff;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+        .hero-text h2 {
+            font-size: 30px;
+            color: #ffffff;
+            margin: 0;
+            padding-bottom: 25px;
+            line-height: 1;
+            font-weight: 700;
+        }
+        .hero-text p{
+            font-size: 20px;
+            color: #e8f3f3;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+    /* ==== Marquee Positioned Right Below Nav and Above Image (FIXED) ==== */
+    .marquee-sub-nav {
+        position: absolute;
+        top: 50px;            
+        right: 30px;
+        left: 10px;             
+        width: 100%;         
+        z-index: 100;         
+    }
+
+    .marquee-sub-nav marquee {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff9f9f6;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+        
+        /*=====image section=====*/
+        .hero-image{
+            float: none;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;/*keeps image touching the bottom*/
+        }
+        .hero-image img{
+            max-height: 300px;
+            width: auto;
+            /*====creates the rounded bottom edge from my image====*/
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transition: transform 0.3s;
+        }
+        .hero-image img:hover {
+            transform: scale (1.02)
+        }
+
+        .hero-image-wrapper img{
+            width:260px;
+            height: 260px;
+            border-radius: 260px;
+            overflow:hidden;
+            object-fit:cover;
+            border:10px solid whitesmoke;
+            box-shadow:0 20 px 40 px rgb(231, 202, 202);
+            margin-top:60px;
+        }
+        .social-links{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 0px;
+            width: 100px;
+        }
+        .social-links a{
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .social-links a:hover{
+            transform: scale(1.15)
+        }
+        .social-links img{
+            height: 30px
+        }
+        .image-and-socials{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        /*====modern main background section setup====*/
+        main{
+            background-color:#f5d9dd;
+            min-height: 50vh;
+            margin: 0;
+            padding: 70px 0px;
+        }
+        .section-content-area{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section{
+            margin-bottom: 50px;
+            color: #fc7287;
+            position: relative;
+        }
+        .section-title{
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /*====card====*/
+        .content-card{
+            background: var(--primary);
+            padding: 35px;
+            border-radius: 22px;
+            box-shadow: 0 25px 55px rgb(49, 46, 46);
+            margin-bottom: 30px;
+            border-left: 6px solid var(--accent);
+            transition:.35s;
+        }
+        .card-hover{
+            transform: translateY(-6px);
+        }
+        .content-card p{
+            font-size: 17px;
+            line-height: 1.8;
+            color: black;
+            margin: 0;
+            text-align: left;
+        }
+
+
+        /*====grid====*/
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 10px;
+        }
+
+        /*====Button====*/
+        .btn{
+            display: inline-block;
+            margin-top: 15px;
+            background: var(--primary);
+            color:#ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover{
+            background: rgb(255, 171, 185)
+        }
+
+        /*====Table====*/
+        table{
+                border: 1px solid rgb(203, 65, 125);
+                border-collapse: collapse;
+                width: 600px;
+                margin: 30px auto;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+        th,td{
+                border: 1px solid rgb(203, 65, 125);
+                padding: 14px 20px;
+            }
+        th {
+                background-color: white;
+                color: #333333;
+                font-weight: 600;
+                width: 25%;
+            }
+        td {
+                text-align: center;
+                background-color: rgb(239, 144, 174);
+                color: #000000;
+            }
+        tr:hover td{
+                background-color: rgb(243, 148, 164);
+                transition: background-color 0.2s ease;
+        }
+        .profile-img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin-top: 10px;
+            border: 2px solid rgb (180,50,100);
+        }
+
+        /* ==== Centers the links and aligns them side-by-side ==== */
+        .footer-links-center {
+          display: flex;
+          justify-content: center; 
+          align-items: center;     
+          gap: 30px;               
+          padding: 40px 20px;      
+          width: 100%;
+          box-sizing: border-box;
+        }
+        /* Responsive Layout for Tablets/Mobile Devices */
+        @media (max-width: 768px){
+            .video-grid {
+                grid-template-columns: 1fr; 
+            }
+            .nav-container {
+                justify-content: center; 
+                padding: 10px 0;
+                gap: 10px;
+            }
+            .nav-container a {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+            .video-wrapper-outer {
+                padding: 15px;
+            }
+            }
+
+    </style>
+    </head>
+    <body>
+
+        <!--top nav-->
+        <nav>
+            <div align="center"></div>
+            <div class="nav-container">
+               <a href="homepage.html">HOME</a>
+               <a href="about me.html">ABOUT ME</a>
+               <a href="education.html">EDUCATION</a>
+               <a href="experience.html">EXPERIENCE</a>
+               <a href="gallery.html">GALLERY</a>
+               <a href="video2.html" class="active">VIDEO</a>
+               <a href="family.html">FAMILY</a>
+            </div>
+        </nav>
+
+        <!--Content area-->
+        <header>
+        <div class="hero-section">
+              <!-- FULL WIDTH MARQUEE: Sits here to cross the entire screen width -->
+             <div class="marquee-sub-nav">
+                <marquee behavior="scroll" direction="left" scrollamount="5">MY PERSONAL WEBSITE THAT SHOWS INTERSTING PERSONAL INFORMATION ABOUT ME!</marquee>
+         </div>
+            <div class="container">
+                <!--text on the left-->
+                <div class="hero-text">
+                  <h1 align="center"><a name="top">LET'S DISCOVER<br>ABOUT ME TOGETHER!</a></h1>
+                  <h2 align="center" style="font-size: 30px;">🌸NUR ALIYAH🌸</h2>
+                  <p align="center"><b>Diploma in Information Management | CDIM1105B</b></p>
+                </div>
+
+                <!--image and social media links on the right-->
+                <div class="image-and-socials">
+                    <!--Profile image-->
+                    <div class="hero-image">
+                      <div class="hero-image-wrapper">
+                       <img src="images/myself.jpg" alt="myself image">
+                      </div>
+                    </div>
+                   <!--Social Media links(below image)-->
+                   <div class="social-links">
+                       <a href="https://www.tiktok.com/@ayddeeaa?_r=1&_t=ZS-96hrBECg4Ky" target="_blank"><img src="images/tiktok logo icon.png" alt="TikTok" style="height: 65px; width: auto; display: block; filter: invert(1) brightness(2);"></a>
+                       <a href="mailto:2024527945@student.uitm.edu.my" target="_blank"><img src="images/email logo.png" alt="Email" style="height: 40px; width: auto; display: block; filter: invert(1) brightness(2);"></a>
+                       <a href="tel:+60174358066" target="_blank"><img src="images/Telephone logo.png" alt="Telephone" style="height: 40px; width: auto; display: block; filter: invert(1) brightness(2);"></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        </header>
+
+       <!--main area section background color-->
+        <main>
+            <div class="section-content-area">
+
+            <!--ABOUT ME SECTION-->
+            <section class="section">
+                <h2 class="section-title"><a name="subhead2">ABOUT ME</a></h2>
+                <div class="content-card">
+                    <p>
+                         Hi! Assalamualaikum. My name is <b>Nur Aliyah Binti Khamizi</b>. I was born on <b>17 December 2005</b>(21<sup>st</sup> years). 
+                         I am from <b>Petaling Jaya, Selangor</b>. I have <b>five siblings</b>, and I am the youngest in the family. I began my early education 
+                         at Tabika KEMAS at the age of six. Then, I continued my religious education at Sekolah Agama Islam At-Tohirin, where I successfully completed the 
+                         <abbr title="Peperiksaan Sekolah Rendah Agama">PSRA</abbr>. For my primary education, I studied at <abbr title="Sekolah Kebangsaan Seksyen 6 Kota Damansara">SKS6KD</abbr>, and completed 
+                         my <abbr title="Ujian Peperiksaan Sekolah Rendah">UPSR</abbr> at the age of 12 with good results. I later pursued my secondary education at <abbr title="Sekolah Menengah Kebangsaan Seksyen 4 Kota Damansara">SMKS4KD</abbr>, 
+                         successfully completed <abbr title="Sijil Pelajaran Malaysia">SPM</abbr> with flying colors. Throughout my school years, I was actively involved in co-curricular activities, 
+                         including serving as a school cooperative and taking on various leadership roles. Currently, I am in my final semester of a Diploma in
+                         Information Management at <abbr title="Universiti Teknologi MARA">UiTM</abbr> Rembau, Negeri Sembilan. <a href="about me.html" target="_blank" style="color: rgb(0, 0, 255)">see more</a>
+                    </p>
+                </div>
+            </section>
+
+            <!--EDUCATION SECTION-->
+            <section class="section">
+                <h2 class="section-title"><a name="subhead3">EDUCATION</a></h2>
+                <!--All 3 items image school logo in same content card-->
+                <div class="content-card">
+                    <!--grid system with enhanced gap separation -->
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 35px;">
+                    
+                    <!-- SCHOOL ITEM 01 -->
+                    <div class="education-item" style="display: flex; flex-direction: column; align-items: center;">
+                        <!-- Fixed placeholder box to prevent varying badge aspect ratios from misaligning fields -->
+                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; width: 100%; max-width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <img src="images/Sekolah_Kebangsaan_Seksyen_6.gif" alt="SK Seksyen 6 Kota Damansara" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <h3 style="font-size: 24px; color: var(--accent); margin: 0 0 10px 0; font-weight: 800;">01</h3>
+                            <h4 style="font-size: 17px; margin: 0 0 10px 0; color: #000000; font-weight: 700; line-height: 1.3;">Sekolah Kebangsaan Seksyen 6 Kota Damansara, Petaling Jaya, Selangor</h4>
+                            <p style="font-size: 14.5px; color: #444444; line-height: 1.6; margin: 0 0 15px 0; justify-content: center;">This school shaped my early academic journey and helped me build strong foundations in creativity, discipline, and learning.</p>
+                            <a href="https://www.instagram.com/sks6kd?igsh=MTY2NmhoNnpzbXl5Nw==" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">Visit School Instagram</a>
+                        </div>
+                    </div>
+
+                    <!-- SCHOOL ITEM 02 -->
+                    <div class="education-item" style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; width: 100%; max-width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <img src="images/smks4kd images.jpg" alt="SMK Seksyen 4 Kota Damansara" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <h3 style="font-size: 24px; color: var(--accent); margin: 0 0 10px 0; font-weight: 800;">02</h3>
+                            <h4 style="font-size: 17px; margin: 0 0 10px 0; color: #000000; font-weight: 700; line-height: 1.3;">Sekolah Menengah Kebangsaan Seksyen 4 Kota Damansara, Petaling Jaya, Selangor</h4>
+                            <p style="font-size: 14.5px; color: #444444; line-height: 1.6; margin: 0 0 15px 0; justify-content: center;">Here I expanded my knowledge, explored new interests, and developed skills that influenced my future direction.</p>
+                            <a href="https://www.tiktok.com/@smkkd4?_r=1&_t=ZS-96kASKF3mWz" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">Visit School Tiktok</a>
+                        </div>
+                    </div>
+
+                    <!-- SCHOOL ITEM 03 -->
+                    <div class="education-item" style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="background: #ffffff; padding: 10px; border-radius: 12px; width: 100%; max-width: 220px; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <img src="images/UiTMRembau.png" alt="UiTM Kampus Rembau" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                        </div>
+                        <div style="width: 100%; text-align: left;">
+                            <h3 style="font-size: 24px; color: var(--accent); margin: 0 0 10px 0; font-weight: 800;">03</h3>
+                            <h4 style="font-size: 17px; margin: 0 0 10px 0; color: #000000; font-weight: 700; line-height: 1.3;">Universiti Teknologi Mara, Kampus Rembau, Negeri Sembilan</h4>
+                            <p style="font-size: 14.5px; color: #444444; line-height: 1.6; margin: 0 0 15px 0; justify-content: center;">This institution allowed me to grow creatively and academically, shaping my passion and preparing me for real-world challenges.</p>
+                            <a href="https://nsembilan.uitm.edu.my/rembau/" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">Visit University Website</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+         <!--EXPERIENCE SECTION-->
+        <section class="section">
+            <h2 class="section-title"><a name="subhead4">EXPERIENCE</a></h2>
+            
+            <!-- Flex/Grid wrapper to place the 2 experience cards side-by-side -->
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px;">
+                
+                <!-- EXPERIENCE CARD 1 -->
+                <div class="experience-card" style="background-color: #ffffff; padding: 25px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+                    <!-- Cropped top layout image wrapper -->
+                    <div class="experience-image-wrapper" style="width: 100%; height: 240px; border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/lacher-patisserie-hq-kota-damansara-logo-1024x576.jpg" alt="Lacher patisserie" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <!-- Left-aligned description details -->
+                    <div style="text-align: left; padding: 0 5px;">
+                        <h3 style="font-size: 22px; color: #000000; margin: 0 0 12px 0; font-weight: 700; text-align: center;">Part-Time Experience</h3>
+                        <p style="font-size: 14.5px; line-height: 1.7; color: #444444; text-align: center; margin: 0;">
+                         During a semester break, I worked at Lacher patisserie in Petaling Jaya as a operator and packer. This role helped me develop skills in customer service, teamwork, and time management.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE CARD 2 -->
+                <div class="experience-card" style="background-color: #ffffff; padding: 25px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+                    <!-- Cropped top layout image wrapper -->
+                    <div class="experience-image-wrapper" style="width: 100%; height: 240px; border-radius: 12px; overflow: hidden; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/hospital.jpg" alt="Thomson Hospital Kota Damansara" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <!-- Left-aligned description details -->
+                    <div style="text-align: left; padding: 0 5px;">
+                        <h3 style="font-size: 22px; color: #000000; margin: 0 0 12px 0; font-weight: 700; text-align: center;">Internship Experience</h3>
+                        <p style="font-size: 14.5px; line-height: 1.7; color: #444444; text-align: center; margin: 0;">
+                         I completed a two-month internship at Thomson Hospital Kota Damansara,Selangor, where I gained hands-on experience in medical record operations and administrative tasks, learning how a life-cycle records functions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--GALLERY SECTION-->
+        <section class="section">
+            <h2 class="section-title"><a name="subhead5">GALLERY</a></h2>
+            
+            <!-- White card container matching ABOUT ME and EDUCATION styling -->
+            <div class="content-card" style="padding: 25px; display: flex; justify-content: center; align-items: center;">
+                
+                <!-- The Interactive Image Wrapper Box -->
+                <div class="gallery-container" style="position: relative; width: 100%; max-width: 800px; height: 450px; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    
+                    <!-- Main Large Showcase Image -->
+                    <img src="images/myself and train.jpg" alt="My Showcase Gallery Image" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    
+                    <!-- Hover/Touch Overlay Mask Sheet -->
+                    <div class="gallery-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(32, 4, 7, 0.75); display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease; pointer-events: none;">
+                        
+                        <!-- Interactive Redirect Link Button -->
+                        <a href="gallery.html" style="pointer-events: auto; background: var(--primary); color: #200407; text-decoration: none; padding: 14px 28px; font-weight: 700; font-size: 16px; border-radius: 30px; letter-spacing: 1px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); transition: transform 0.2s ease, background 0.2s ease;">
+                            CLICK HERE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--VIDEO SECTION--> 
+        <section class="section"> 
+           <h2 class="section-title"><a name="subhead6">VIDEO</a></h2> 
+    
+           <!-- Added inline style="..." to shrink the box width and center all internal elements -->
+           <div class="content-card" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 35px 20px;"> 
+        
+          <!-- Cleaned up text style and added a bottom margin to push the button down -->
+          <p style="font-size: 16px; margin-bottom: 20px; font-weight: 500;">Click button below to see my video &gt;</p> 
+        
+          <p style="margin: 0; display: flex; justify-content: center;"> 
+            <!-- Using Image as Hyperlink, local Link: Link to other pages within the current website --> 
+            <a href="video2.html" target="_blank" style="display: inline-block; transition: transform 0.2s;">
+                <img src="images/button video.png" height="70" alt="Video Button" style="display: block;">
+            </a> 
+         </p> 
+         </div> 
+        </section>
+        <!--CONTACT SECTION-->
+        <h2 class="section-title">CONTACT</h2> 
+    
+            <table>
+                <tr>
+                   <th>Name</th>
+                   <td>
+                         Nur Aliyah Binti Khamizi
+                    </td>
+                </tr>
+                <tr>
+                   <th rowspan="2">Email</th>
+                   <td><a href="mailto:mizialiyah@gmail.com">mizialiyah@gmail.com</a></td>
+                </tr>
+                <tr>
+                   <td><a href="mailto:2024527945@student.uitm.edu.my">2024527945@student.uitm.edu.my</a></td>
+                </tr>
+            </table>
+            
+            <div class="footer-links-center">
+            <a href="#top">BACK TO TOP</a>
+            <a href="#subhead2">ABOUT ME</a>
+            <a href="#subhead3">EDUCATION</a>
+            <a href="#subhead4">EXPERIENCE</a>
+            <a href="#subhead5">GALLERY</a>
+            <a href="#subhead6">VIDEO</a>
+            </div>
+
+        <!-- Dynamic Embedded CSS Styles targeting the Gallery Animation Effects -->
+        <style>
+            /* Smoothly fades in the dark mask sheet when hovering over the image box container */
+            .gallery-container:hover .gallery-overlay {
+                opacity: 1 !important;
+                pointer-events: auto !important;
+            }
+            
+            /* Gives the background image a subtle cinematic zoom-in effect when hovered */
+            .gallery-container:hover img {
+                transform: scale(1.06);
+            }
+
+            /* Simple bounce scale animation effect on the link button itself when targeted */
+            .gallery-overlay a:hover {
+                transform: scale(1.08);
+                background: var(--accent) !important;
+                color: #ffffff !important;
+            }
+        </style>
+        </main>
+    </body>
+</html>
