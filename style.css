@@ -295,6 +295,7 @@ style
 
            /*footer copyright*/
            .full-footer{
+             display: block !important;
              width: 100% !important;
              position: relative !important;
              left: 50% !important;
