@@ -314,28 +314,30 @@ style
                 padding: 15px;
             }
             }
-
+          /*footer copyright*/
            .full-footer{
              width: 100%
-             padding: 25px 0;
-             background-color: #ffe4e1;
-             border-top: 1px solid #ffb6c1;
-             box-sizing: bordr-box;
-             padding: 25px 0;
-                   
-                   
-           .footer-box{
+             position: relative;
+             left: 50%;
+             right: 50%;
+             margin-left: -50vw;
+             margin-right: -50vw;
+             background-color: #fff0f5;
+             border-top: 1px solid #ffd1dc;
+             padding: 18px 0;
+             margin-top: 50px;
+             box-sizing: border-box;
+           }    
+           .footer-content{
              width: 100%;
-             max-width: 1200px;
-             margin: 0 auto;
-             padding:0 20px;
              text-align: center;
            }
            .footer-content p{
-            margin: 6px 0;
-            color: #4a4a4a;
+            margin: 0;
+            color: #555555;
             font-size: 14px;
             font-family: sans-serif;
+            text-decoration: none;
            }
         
         /*----ABOUT ME SECTION PAGE*----/
