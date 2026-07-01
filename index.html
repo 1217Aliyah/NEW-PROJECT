@@ -560,9 +560,20 @@
 
              <footer class="full-footer">
                  <div class="footer-content">
-                 <p>&copy; <span id="current-year"></span> Aliyah Mizi &bull; Last-Updated: <span id="last-updated">Loading...</span></span></p>
+                 <p>&copy; <span id="current-year"></span> Aliyah Mizi &bull; Last-Updated: <span id="last-updated"></span></p>
                  </div>
              </footer>
+
+            <!--Automatic Dates Javascript (Must include this so the year & date display correctly) -->
+            <script>
+            // Automatically gets and updates the current year
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+
+           // Automatically detects the exact last date you modified the file
+           const lastMod = new Date(document.lastModified);
+           const options = { year: 'numeric', month: 'long', day: 'numeric' };
+           document.getElementById("last-updated").textContent = lastMod.toLocaleDateString("en-US", options);
+           </script>
 
         <!-- Dynamic Embedded CSS Styles targeting the Gallery Animation Effects -->
         <style>
